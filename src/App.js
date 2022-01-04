@@ -6,10 +6,12 @@ import user from './user.json';
 import data from './data.json';
 import friends from './friends.json';
 import transactions from './transactions.json';
+import { GlobalStyle } from './components/GlobalStyle';
 
 export default function App() {
   return (
     <>
+      <GlobalStyle />
       <Profile
         username={user.username}
         tag={user.tag}
