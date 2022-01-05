@@ -28,5 +28,8 @@ ol {
   list-style: none;
 }
 
+body{
+  padding-top: 25px;
+}
 
 `;

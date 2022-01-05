@@ -1,30 +1,39 @@
 import PropTypes from 'prop-types';
-import { Card } from './Profile.styled';
+import {
+  Card,
+  Username,
+  Tag,
+  Location,
+  BoardStats,
+  StatList,
+  StatTitle,
+  StatDesk,
+} from './Profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
     <Card>
       <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+        <img src={avatar} alt="User avatar" width="250" />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{stats.views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
-        </li>
-      </ul>
+      <BoardStats>
+        <StatList>
+          <StatTitle>Followers</StatTitle>
+          <StatDesk>{stats.followers}</StatDesk>
+        </StatList>
+        <StatList>
+          <StatTitle>Views</StatTitle>
+          <StatDesk>{stats.views}</StatDesk>
+        </StatList>
+        <StatList>
+          <StatTitle>Likes</StatTitle>
+          <StatDesk>{stats.likes}</StatDesk>
+        </StatList>
+      </BoardStats>
     </Card>
   );
 }
