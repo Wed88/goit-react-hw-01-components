@@ -11,8 +11,6 @@ export const Box = styled.li`
   padding: 10px;
 `;
 
-export const Avatar = styled.img``;
-
 export const Name = styled.p`
   font-weight: 500;
   font-size: 26px;
